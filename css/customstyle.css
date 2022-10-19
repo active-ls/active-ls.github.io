@@ -1,0 +1,269 @@
+
+/*fonts of website */
+
+
+/*google fonts*/
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../googlefonts/NotoSansTC-Light.otf');
+
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  min-height: 0rem;
+  padding-top: 0rem;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Noto Sans TC', sans-serif;
+    color:#1a1a1a;
+}
+p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #1a1a1a;
+}
+
+/*end google fonts*/
+
+/*end fonts of website */
+
+.content_size {
+	/* 桌面版內容高度 */
+	/* 100vh - 162px 頭頂高度 - 131px 底部高度 */
+	/*height: calc( 100vh - 162px - 131px );*/
+  height: calc( 100vh - 90px - 170px );
+	overflow-y: scroll;
+}
+
+
+
+
+/*desktop menu */
+.menu_style {
+	/* 桌面版 Menu 顏色 */
+    color:black;
+}
+.menu_style:hover {
+	/* 桌面版 Menu 按上 顏色 */
+    color:#d22700;
+}
+/*end desktop menu */
+
+
+/*header style*/
+.header_row {
+  /* 桌面版頂Menu底圖及高度 */
+  background: url('../assets/img/top_bar.png') center / cover no-repeat;
+  height: 162px;
+}
+
+.logo {
+    padding-top: 60px;
+    max-width: 280px;
+}
+
+
+/*end header style*/
+.modal-content {
+    border-radius: 0;
+    border: none;
+    background-color: #ffffff;
+}
+.nav-link .active {
+    background-color:#2d9140;
+}
+/*手機版Menu 選擇了的顏色*/
+.activelink {
+    
+    background-color:#2d9140;
+}
+.activelink > h3{
+    padding-left: 20%;  
+    color: white;
+}
+/*手機版Menu 非選擇了的顏色*/
+.inactivelink > h3 {
+    padding-left: 20%;
+    color: #000000;
+}
+
+/*mobile_header_style*/
+.mobileheader {
+  /* 手機版頂Menu底圖及高度 */	
+  background: url('../assets/img/mobile/mobile_topbar.png') center / cover no-repeat;
+  height: 90px;
+  padding-top: 20px;
+}
+/*end mobile_header_style*/
+
+.main_content {
+	/* 內容背景圖 */
+  background: url('../assets/img/2022_04_NGO_website-08.png') center / cover no-repeat;
+}
+/*bottom style*/
+.bottom_row {
+  /* 桌面版底聯絡底圖及高度 */
+  background: url('../assets/img/bottom_bar.png') center / cover no-repeat;
+  min-height: 131px;
+}
+/*end bottom style*/
+.mobilebottom {
+	/* 手機版底聯絡底圖及高度 */
+    background: url('../assets/img/mobile/mobile_bottombar.png') center / cover no-repeat;
+  min-height: 160px;     
+}
+/*copy right text */
+.mobileaddress {
+    font-size: 13px;
+}
+.mobilecopyright {
+    font-size: 13px;
+}
+
+
+.copy_right_text {
+    font-size: 13px;
+}
+/*end copy right text */
+/*heading color */
+.headingcolor{
+	/* 內容標題顏色*/
+    color:#2d9140;
+}
+/*end heading color*/
+
+ @media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 58%;
+        height: 100%;
+    }
+
+    .navbar-collapse.collapsing {
+        right: -58%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        right: 0;
+        transition: right 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: right 500ms ease-in-out;
+    }
+}
+.navbar-toggler{
+    width: 47px;
+    height: 34px;
+    /*background-color: #eafff0;*/
+    border:none;
+}
+.navbar-toggler .line{
+    width: 100%;
+    float: left;
+    height: 2px;
+    background-color: #31686a;
+    margin-bottom: 5px;
+}
+.navbar-toggler-icon1 {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(100,100,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+/*mobile device*/
+
+.mobileheader {
+	
+}
+
+.maincontent {
+	padding-left: 0px;
+	padding-right: 0px;
+	z-index: 10;
+}
+
+/*disable navbar button border*/
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/*end disable navbar button border*/
+
+/*mobile menu*/
+.modal.left .modal-dialog {
+    /*width: 240px;*/
+    width: 58%;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content {
+    overflow-y: auto;
+}
+
+.modal.left.fade .modal-dialog {
+    /*right: -240px;*/
+    right: -58%;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.left.fade.show .modal-dialog {
+    right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+
+
+
+
+
+
+
+/*menu row differnet size*/
+/*mobile*/
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+
+ }
+/*end menu row different size*/
